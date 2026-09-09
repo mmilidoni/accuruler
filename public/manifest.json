@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "AccuRuler",
   "version": "1.0.0",
-  "description": "Measure any element, on any background. Click-drag a ruler overlay with live width, height and coordinates that stays visible on dark pages.",
+  "description": "Measure any element, on any background. Click-drag a ruler with live width, height and coordinates, always visible on dark pages.",
   "permissions": ["activeTab", "scripting", "storage"],
   "background": {
     "service_worker": "background.js",
