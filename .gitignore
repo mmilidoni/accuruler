@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-test/
+release/
+store-assets/
+*.log
+.DS_Store

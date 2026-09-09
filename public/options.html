@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AccuRuler options</title>
+  <script src="options.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>AccuRuler</h1>
+    <p class="sub">Ruler appearance and units</p>
+
+    <label class="row checkbox">
+      <input type="checkbox" id="auto-contrast">
+      <span>
+        Auto-contrast
+        <small>Flips ruler, crosshair and label colors to stay visible on any background.</small>
+      </span>
+    </label>
+
+    <fieldset id="custom-colors">
+      <legend>Custom colors</legend>
+      <div class="row">
+        <label for="border">Lines / crosshair</label>
+        <input type="color" id="border">
+      </div>
+      <div class="row">
+        <label for="fill">Fill</label>
+        <input type="color" id="fill">
+      </div>
+      <div class="row">
+        <label for="fill-opacity">Fill opacity</label>
+        <input type="range" id="fill-opacity" min="0" max="1" step="0.05" value="0">
+        <span id="fill-opacity-value">0%</span>
+      </div>
+      <div class="row">
+        <label for="label-bg">Label background</label>
+        <input type="color" id="label-bg">
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <label for="units">Units</label>
+      <select id="units">
+        <option value="css">CSS pixels</option>
+        <option value="physical">Physical pixels (&times; devicePixelRatio)</option>
+        <option value="mm">Millimetres (mm)</option>
+        <option value="cm">Centimetres (cm)</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button id="save" type="button">Save</button>
+      <button id="reset" type="button" class="ghost">Reset to defaults</button>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+  </main>
+</body>
+</html>

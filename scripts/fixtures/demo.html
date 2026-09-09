@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Acme — Analytics Dashboard</title>
+<style>
+  :root {
+    --page: #f4f6fb;
+    --card: #ffffff;
+    --ink: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --violet: #7c3aed;
+    --blue: #2563eb;
+    --emerald: #059669;
+    --rose: #e11d48;
+  }
+  body.dark {
+    --page: #0b1220;
+    --card: #111a2c;
+    --ink: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #1e293b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    height: 100vh;
+    overflow: hidden;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; padding: 28px 64px 0; }
+  .brand .dot { width: 14px; height: 14px; border-radius: 4px; background: linear-gradient(135deg, var(--violet), var(--blue)); }
+  .brand b { font-size: 17px; letter-spacing: .2px; }
+  .brand nav { margin-left: auto; color: var(--muted); font-size: 14px; display: flex; gap: 22px; }
+  .hero { padding: 44px 64px 26px; }
+  .hero h1 { margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -.5px; }
+  .hero p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+  .badge {
+    position: absolute; top: 12px; left: 420px;
+    width: 150px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--rose); color: #fff;
+    font-size: 13px; font-weight: 600; border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(225, 29, 72, .25);
+  }
+  .cards { display: flex; gap: 24px; padding: 0 64px; }
+  .card {
+    width: 300px; height: 190px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+  }
+  .card .head { height: 64px; }
+  .card .body { padding: 14px 16px; }
+  .card h3 { margin: 0; font-size: 15px; font-weight: 600; }
+  .card .metric { margin-top: 6px; font-size: 26px; font-weight: 700; letter-spacing: -.5px; }
+  .card .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .card-1 .head { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+  .card-2 .head { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+  .card-3 .head { background: linear-gradient(135deg, #10b981, #34d399); }
+  .panel {
+    margin: 28px 64px 0;
+    height: 240px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+    padding: 22px 24px;
+  }
+  .panel h2 { margin: 0 0 14px; font-size: 15px; font-weight: 600; }
+  .bars { display: flex; gap: 10px; align-items: flex-end; height: 150px; }
+  .bars i { flex: 1; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, #a5b4fc, #6366f1); }
+  .bars i:nth-child(2n) { background: linear-gradient(180deg, #7dd3fc, #0ea5e9); }
+  .footer { padding: 22px 64px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <span class="dot"></span><b>Acme</b>
+    <nav><span>Dashboard</span><span>Reports</span><span>Settings</span></nav>
+  </div>
+  <div class="hero">
+    <h1>Analytics Dashboard</h1>
+    <p>Site traffic, conversions and revenue — all in one place.</p>
+  </div>
+  <div class="badge" id="badge">v2.4 · beta</div>
+  <div class="cards">
+    <div class="card card-1" id="card-1">
+      <div class="head"></div>
+      <div class="body"><h3>Unique visitors</h3><div class="metric">128,540</div><div class="sub">+12.4% vs last week</div></div>
+    </div>
+    <div class="card card-2" id="card-2">
+      <div class="head"></div>
+      <div class="body"><h3>Conversion rate</h3><div class="metric">3.72%</div><div class="sub">+0.4 pts vs last week</div></div>
+    </div>
+    <div class="card card-3" id="card-3">
+      <div class="head"></div>
+      <div class="body"><h3>Avg. session</h3><div class="metric">6m 41s</div><div class="sub">-0.8% vs last week</div></div>
+    </div>
+  </div>
+  <div class="panel" id="panel">
+    <h2>Traffic over time</h2>
+    <div class="bars">
+      <i style="height:34%"></i><i style="height:52%"></i><i style="height:41%"></i>
+      <i style="height:66%"></i><i style="height:58%"></i><i style="height:78%"></i>
+      <i style="height:70%"></i><i style="height:90%"></i><i style="height:82%"></i>
+      <i style="height:96%"></i><i style="height:74%"></i><i style="height:86%"></i>
+    </div>
+  </div>
+  <div class="footer">© 2026 Acme Inc. · Privacy · Terms</div>
+  <script>
+    if (new URLSearchParams(location.search).get("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+</body>
+</html>
