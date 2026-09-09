@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccuRuler — Privacy Policy</title>
+<style>
+  :root { --page:#f4f6fb; --ink:#111827; --muted:#6b7280; --accent:#7c3aed; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--page); color:var(--ink); line-height:1.65; }
+  main { max-width:760px; margin:0 auto; padding:64px 24px 40px; }
+  .logo { display:flex; align-items:center; gap:12px; font-size:22px; font-weight:700; }
+  .logo .dot { width:18px; height:18px; border-radius:5px; background:linear-gradient(135deg,#8b5cf6,#2563eb); }
+  h1 { font-size:32px; margin:36px 0 4px; letter-spacing:-.5px; }
+  .updated { color:var(--muted); font-size:14px; margin:0 0 28px; }
+  h2 { font-size:19px; margin:28px 0 10px; }
+  code { background:#eef0f6; border-radius:4px; padding:1px 5px; font-size:13px; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo"><span class="dot"></span>AccuRuler</div>
+  <h1>Privacy policy</h1>
+  <p class="updated">Last updated: 2026-09-09</p>
+  <p>AccuRuler collects no personal data and transmits nothing.</p>
+  <ul>
+    <li>No analytics, ads, or tracking.</li>
+    <li>The extension makes no network requests.</li>
+    <li>Settings (ruler colors, contrast mode, units) are stored only in your
+      browser's <code>storage.sync</code> area. Sync is provided by your browser
+      and tied to your own browser profile; the data never leaves your device
+      through AccuRuler.</li>
+    <li>While the ruler is on, the extension can read the page you are currently
+      viewing (via the <code>activeTab</code> permission granted by clicking the
+      AccuRuler toolbar button). It does not read or transmit any page content.</li>
+  </ul>
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>activeTab</code> — lets the ruler overlay appear on the tab you are
+      viewing when you toggle it on.</li>
+    <li><code>scripting</code> — injects the ruler overlay into that tab.</li>
+    <li><code>storage</code> — saves your color and unit preferences.</li>
+  </ul>
+  <h2>Contact</h2>
+  <p>Open an issue at <a href="https://github.com/mmilidoni/accuruler">github.com/mmilidoni/accuruler</a>.</p>
+  <footer>© 2026 AccuRuler</footer>
+</main>
+</body>
+</html>

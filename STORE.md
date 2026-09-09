@@ -43,7 +43,7 @@ Settings stay in your browser.
 
 ## URLs
 
-- Privacy policy: https://mmilidoni.github.io/accuruler/PRIVACY.md
+- Privacy policy: https://mmilidoni.github.io/accuruler/privacy.html
 - Homepage: https://mmilidoni.github.io/accuruler/
 - Source: https://github.com/mmilidoni/accuruler
 
@@ -59,5 +59,5 @@ Settings stay in your browser.
 ## GitHub Pages setup (for the URLs above)
 
 Enable Pages on the `mmilidoni/accuruler` repo: Settings → Pages → deploy
-from `main` branch root. GitHub then serves `README.md` at the homepage URL
-and `PRIVACY.md` at the privacy URL — no extra files needed.
+from a branch: `main`, folder `/docs`. GitHub then serves `docs/index.html`
+at the homepage URL and `docs/privacy.html` at the privacy URL.

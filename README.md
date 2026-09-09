@@ -131,6 +131,7 @@ Icon regeneration requires Windows; icons are committed, so this is optional.
 ## Layout
 
 ```
+├─ docs/                   # GitHub Pages site: index.html (homepage), privacy.html
 ├─ public/                 # copied verbatim into dist/
 │  ├─ manifest.json        # MV3: activeTab, scripting, storage; options_ui
 │  ├─ options.html         # settings page shell (loads options.js)
